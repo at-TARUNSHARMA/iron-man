@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .heading{
+            height: 700px;
+            margin: 5%;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        .heading #backgroundimage{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url(https://i.ytimg.com/vi/Tm80bZlFKms/maxresdefault.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: blur(2px);
+        }
+        .heading #ironman{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .heading #ironman img{
+            height: 600px;
+        }
+
+        .heading #ironman img:hover{
+            transform: scale(1.1);
+            transition: transform 1s ease;
+        }
+
+        .heading #name{
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px; 
+            color: #000000;
+            text-transform: uppercase;
+            padding: 20px;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            background-color: #9fdfe2;
+            box-shadow: 2px 2px 5px #888888;
+        }
+
+        .about{
+            margin: 0%;
+            padding: 5%;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #e4f4f5;
+        }
+
+        .about #about{
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: 4%;
+        }
+
+        .content{
+            background-color: black;
+        }
+
+        .content h1{
+                    text-transform: capitalize;
+                    color: white;
+                    text-align: center;
+                    padding: 5px;
+                    font-size: 40px;
+        }
+        
+        .gallery {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+
+        .gallery img {
+            height: 700px;
+            border-radius: 8px;
+            width: 27%;
+            margin: 20px;
+        }
+        #stark-industries{
+            padding: 5%;
+            color: white;
+        }
+        #more {display: none;}
+        span.read-more {
+            color: blue;
+            cursor: pointer;
+        }
+        span.read-more:hover {
+            text-decoration: underline;
+        }
+
+        .section{
+            background-color: black;
+        }
+
+        .section h1{
+                    text-transform: capitalize;
+                    color: white;
+                    text-align: center;
+                    padding: 5px;
+                    font-size: 40px;
+        }
+        #Industries{
+            display: flex;
+        }
+
+        #Industries img{
+            height: 350px;
+            border-radius: 8px;
+            padding: 5%;
+        }
+        .skills{
+            background-image: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/04/iron-man-avengers-infinity-war.jpg?q=50&fit=crop&w=1500&dpr=1.5);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            text-align: center;
+            color: rgb(11, 8, 8);
+            padding: 3% ;
+        }
+        .skills h1{
+            text-transform: capitalize;
+            padding-bottom: 3%;
+            font-size: 55px;
+        }
+        .skills .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills .box .plates{
+            background-color: rgba(255, 255, 255, 0.334);
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 5px;
+            margin: 5px;
+            height: 250px;
+            width: 30%;
+        }
+
+        .skills .box .plates :hover{
+            background-color: rgb(167, 160, 159);
+        }
+
+        .skills .box .plates .head{
+            font-weight: bold;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe,  
+        .video-container object,  
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .audio-section {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://i.pinimg.com/originals/59/fb/04/59fb043c517d020b9021ee971096218b.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer{
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            padding: 2%;
+            font-weight: bold;
+        }
+
+        .footer h1{
+            text-transform: capitalize;
+            padding: 3%;
+            text-decoration: underline;
+        }
+        .footer .contact{
+            justify-content: center;
+            display: flex;
+        }
+        .footer .contact a{
+            width: 30%;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <div id="backgroundimage"></div>
+        <div id="ironman">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b8d2b12-21e8-4931-8a6d-fb9ecdd60383/dc5rmwg-2249ecd6-106c-4a27-9198-f640dfc658cf.png/v1/fill/w_596,h_1280/avengers_infinity_war_iron_man_png_by_metropolis_hero1125_dc5rmwg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzViOGQyYjEyLTIxZTgtNDkzMS04YTZkLWZiOWVjZGQ2MDM4M1wvZGM1cm13Zy0yMjQ5ZWNkNi0xMDZjLTRhMjctOTE5OC1mNjQwZGZjNjU4Y2YucG5nIiwid2lkdGgiOiI8PTU5NiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.r47mQe2jgaFMHSk-osZpaXjs6FRth2hZe9cXY63CuDk" alt="" >
+        </div>
+        <div id="name">IRON MAN</div>
+    </div>
+    <div class="about">
+        <h1 id="about">about</h1>
+        Iron Man, also known as <strong>Tony Stark</strong>, is one of the most iconic superheroes in the 
+        Marvel Comics universe. Created by <strong>writer Stan Lee</strong>, developed by Larry Lieber, and 
+        designed by artists Don Heck and Jack Kirby, Iron Man made his first appearance in 
+        <strong>"Tales of Suspense"</strong> #39 in 1963.
+
+        Tony Stark, the alter ego of <strong>Iron Man</strong>, is a billionaire industrialist and genius 
+        inventor. 
+        After being critically injured and kidnapped during a weapons demonstration, he 
+        creates a powered suit of armor to save his life and escape captivity. He then further
+         refines the suit and uses its technology to fight crime and protect the world as Iron
+          Man. <br>
+
+        The character of Iron Man has evolved significantly since his creation, with various 
+        iterations and storylines in the comics. He is known for <strong>his wit</strong>, intelligence, and
+         technological prowess, as well as his struggles with his own personal demons and moral
+          dilemmas. Over the years, Iron Man has become a central figure in the Marvel universe,
+           featuring prominently in various comic book story arcs, animated television series, 
+           video games, and, most notably, the <strong>Marvel Cinematic Universe</strong> (MCU).
+        <br>
+        In the MCU, Robert Downey Jr. portrays Tony Stark/Iron Man, starting with the first Iron
+         Man film in 2008. Downey's portrayal has been widely acclaimed, and the character has 
+         played a pivotal role in the development of the MCU, serving as a founding member of the
+          Avengers and playing a significant part in major storylines, including the "Avengers" 
+          films and the "Captain America" trilogy. Iron Man's character arc in the MCU is marked
+           by significant growth, sacrifice, and heroism, ultimately culminating in a dramatic
+            and emotional finale in "Avengers: Endgame" (2019).
+    </div>
+    <div class="content">
+        <h1 id="gallery">gallery</h1>
+        <div class="gallery">
+            <img src="https://i.pinimg.com/550x/5d/d2/c8/5dd2c8f82ef46e0db3fe07a6e3285c2f.jpg" alt="">
+            <img src="https://i.pinimg.com/236x/e1/f6/ba/e1f6ba2316b80194b0b309c3aefddedd.jpg" alt="">
+            <img src="https://w0.peakpx.com/wallpaper/1015/370/HD-wallpaper-ironman-iron-iron-man-marvel-mcu-tony-tony-stark-thumbnail.jpg" alt="">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="section">
+        <h1 class="gallery">stark-industries</h1>
+        <div id="Industries">
+            <img src="https://i.pinimg.com/736x/43/89/f4/4389f47442ab87656c4e3e7c7135815e.jpg" alt="">
+        
+            <div id="stark-industries">
+                <p>Stark Industries is a fictional multinational industrial company in the Marvel 
+                    Comics universe, most prominently featured in Marvel's Iron Man and The Avengers
+                    series. It was founded by Howard Stark, the father of Tony Stark, also known as 
+                    Iron Man. In the storyline, Stark Industries initially started as a small company
+                    that produced electrical appliances and munitions during World War II.<br>
+                    <span id="more">Under the leadership of Tony Stark, the company expanded its focus 
+                        to include cutting-edge technology, particularly in the fields of defense, 
+                        aerospace, and advanced engineering. Tony Stark's innovative genius and his 
+                        development of the Iron Man suit significantly advanced the capabilities of 
+                        Stark Industries, making it a leading technology company in the Marvel 
+                        universe.
+                        <br>
+
+                        Stark Industries is often depicted as a major defense contractor, providing 
+                        high-tech weaponry and equipment to the military and law enforcement 
+                        agencies, as well as pioneering research and development in clean energy 
+                        and other technological advancements. Throughout various Marvel storylines, 
+                        the company's involvement in global conflicts and its contributions to 
+                        technological progress play significant roles in shaping the Marvel 
+                        Cinematic Universe.</span>
+                    </p>
+                <p><span class="read-more" onclick="document.getElementById('more').style.display='inline';">Read more</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="skills">
+        <h1>skills</h1>
+        <div class="box">
+            <div class="plates">
+                <div class="head">
+                    Micro Rockets
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Micro Rockets are the first upgrade you're going to want for an Iron Man build, specifically if you're looking to do a ranged combat-focused build for Tony Stark. The Micro Rockets are an upgrade to rockets that allow Iron Man to fire off a small missile that doles out large damage.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Scorched Earth
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Scorched Earth is another ranged attack upgrade to Iron Man's rocket abilities. It also requires that Micro Rockets are already unlocked.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Javelin
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    The sticky rockets attach to foes and detonate after a short period of time. The longer that the heavy attack button is held, the more rockets that are fired.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Arc Extension
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    The Arc Extension skill upgrade is an improvement on Iron Man's Arc Overload default ability. Arc Overload automatically fills Iron Man's Overcharge energy, shocks nearby foes, and increases ranged attack power and attack speed for 10 seconds.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Arc Field
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    The Arc Field upgrade is another improvement on the Arc Overload skill, and it requires Arc Overload Specialization I to be unlocked.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Energy Pulse
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Energy Puls could be an especially powerful upgrade with a ranged build, as it helps Iron Man protect himself should an opponent get too close to him. The Energy Pulse skill is an upgrade to Iron Man's base Energy Shield ability.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Energy Shunt
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Energy Shunt is a further improvement to the Energy Shield ability as well as the Energy Pulse ability. Naturally, it requires Energy Pulse to be unlocked as a prerequisite.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Ranged Combat Mastery
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Ranged Combat Mastery is the perfect topper to all of these abilities, as it boosts ranged attack damage by 15%. All of these dangerous rocket attacks become even more dangerous, meaning Iron Man is even better at knocking out the hordes of foes that will be coming his way.
+                </div>
+            </div>
+            <div class="plates">
+                <div class="head">
+                    Smart Rockets
+                </div>
+                <hr>
+                <br>
+                <div class="p">
+                    Another rocket upgrade that requires that the Micro Rockets are already unlocked, the Smart Rockets ability is an especially powerful upgrade, though it also uses Iron Man's Supercharge energy.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W54Y0cn78NY?si=BopCmCfV-eDUNT_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="audio-section">
+        <audio controls src="theme.mp3">
+        </audio>
+    </div>
+    <div class="footer">
+        <h1>connect me here</h1>
+        <div class="contact">
+            <a href="">✉ email@gmail.com</a>
+            <a href="">✆ +01-734920**89</a>
+            <a href="">ln linkedin@linkdin.in</a>
+        </div>
+    </div>
+    <div class="footer">
+        <hr>
+        <br>
+        <br>
+        Copyright © 2023 yuvraj. All Rights Reserved
+    </div>
+</body>
+</html>
